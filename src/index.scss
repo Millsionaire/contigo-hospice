@@ -1,0 +1,266 @@
+$contigo-blue: #295b6f;
+$contigo-green: #78AE54;
+$contigo-teal: #4090A5;
+
+.hidden {
+  opacity: 0;
+}
+
+.logo-container {
+  max-height: 55px;
+  overflow: hidden;
+}
+.bird-logo {
+  margin-top: -6px;
+  padding-left: 5px;
+  vertical-align: middle;
+  max-height: 55px;
+}
+
+.word-logo {
+  margin-top: -8px;
+  max-height: 25px;
+  vertical-align: middle;
+}
+
+.carousel-img-container {
+  margin: auto;
+  height: 600px;
+}
+
+.contigo-blue {
+  color: $contigo-blue !important;
+}
+
+.contigo-green {
+  color: $contigo-green !important;
+}
+
+.contigo-teal {
+  color: $contigo-teal !important;
+}
+
+.footer-copyright {
+  background-color: $contigo-blue !important;
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+nav i.material-icons {
+  color: $contigo-blue;
+}
+
+.card-parallax {
+  background-color: rgba(64, 144, 165, 0.5);
+}
+
+.parallax-container.parallax {
+  overflow: hidden;
+}
+
+.moveUpAndFadeIn {
+  position: relative;
+  margin: auto;
+  animation:moveUpAndFadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:moveUpAndFadeIn 3s;
+}
+
+.moveDownAndFadeIn {
+  position: relative;
+  margin: auto;
+  animation:moveDownAndFadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:moveDownAndFadeIn 3s;
+}
+
+.moveRightAndFadeIn {
+  position: relative;
+  margin: auto;
+  animation:moveRightAndFadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:moveRightAndFadeIn 3s;
+}
+
+.moveLeftAndFadeIn {
+  position: relative;
+  margin: auto;
+  animation:moveLeftAndFadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:moveLeftAndFadeIn 3s;
+}
+
+.scaleUpAndFadeIn {
+  position: relative;
+  margin: auto;
+  animation:scaleUpAndFadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:scaleUpAndFadeIn 3s;
+}
+
+.fadeIn {
+  position: relative;
+  margin: auto;
+  animation:fadeIn 3s ease-in-out;
+
+  /* Safari and Chrome */
+  -webkit-animation:fadeIn 3s;
+}
+
+section > h5, section > p {
+  color: $contigo-green;
+}
+
+.contact i {
+  font-size: 7rem;
+
+}
+
+.contact p {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.section {
+  overflow: hidden;
+}
+
+@keyframes fadeIn
+{ from {opacity: 0;}
+  to {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn /* Safari and Chrome */
+{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes moveUpAndFadeIn
+{ from {bottom:-400px; opacity: 0;}
+  to {bottom:0px; opacity: 1}
+}
+
+@-webkit-keyframes moveUpAndFadeIn /* Safari and Chrome */
+{
+  from {top:-400px; opacity: 0;}
+  to {top:0px; opacity: 1;}
+}
+
+@keyframes moveDownAndFadeIn
+{ from {top:-400px; opacity: 0;}
+  to {top:0px; opacity: 1}
+}
+
+@-webkit-keyframes moveDownAndFadeIn /* Safari and Chrome */
+{
+  from {bottom:-400px; opacity: 0;}
+  to {bottom:0px; opacity: 1;}
+}
+
+@keyframes moveRightAndFadeIn
+{ from {left:-1000px; opacity: 0;}
+  to {left:0px; opacity: 1}
+}
+
+@-webkit-keyframes moveRightAndFadeIn /* Safari and Chrome */
+{
+  from {left:-1000px; opacity: 0;}
+  to {left:0px; opacity: 1;}
+}
+
+@keyframes moveLeftAndFadeIn
+{ from {right:-1000px; opacity: 0;}
+  to {right:0px; opacity: 1}
+}
+
+@-webkit-keyframes moveLeftAndFadeIn /* Safari and Chrome */
+{
+  from {right:-1000px; opacity: 0;}
+  to {right:0px; opacity: 1;}
+}
+
+@keyframes scaleUpAndFadeIn {
+  from {
+    -ms-transform: scale(0,0); /* IE 9 */
+    -webkit-transform: scale(0,0); /* Safari */
+    transform: scale(0,0); /* Standard syntax */
+  }
+  to {
+    -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1); /* Standard syntax */
+  }
+}
+
+@-webkit-keyframes scaleUpAndFadeIn {
+  from {
+    -ms-transform: scale(0,0); /* IE 9 */
+    -webkit-transform: scale(0,0); /* Safari */
+    transform: scale(0,0); /* Standard syntax */
+  }
+  to {
+    -ms-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Safari */
+    transform: scale(1,1); /* Standard syntax */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-container {
+    max-height: 55px;
+    overflow: hidden;
+  }
+
+  .bird-logo {
+    margin-top: -6px;
+    padding-left: 5px;
+    vertical-align: middle;
+    max-height: 20px;
+  }
+
+  .word-logo {
+    //margin-top: -8px;
+    max-height: 13px;
+    vertical-align: middle;
+  }
+}
+
+
+
+
+
+
+
+
