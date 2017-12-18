@@ -92,37 +92,37 @@ nav i.material-icons {
 .moveDownAndFadeIn {
   position: relative;
   margin: auto;
-  animation:moveDownAndFadeIn 3s ease-in-out;
+  animation:moveDownAndFadeIn 2s ease-in-out;
 
   /* Safari and Chrome */
-  -webkit-animation:moveDownAndFadeIn 3s;
+  -webkit-animation:moveDownAndFadeIn 2s;
 }
 
 .moveRightAndFadeIn {
   position: relative;
   margin: auto;
-  animation:moveRightAndFadeIn 3s ease-in-out;
+  animation:moveRightAndFadeIn 2s ease-in-out;
 
   /* Safari and Chrome */
-  -webkit-animation:moveRightAndFadeIn 3s;
+  -webkit-animation:moveRightAndFadeIn 2s;
 }
 
 .moveLeftAndFadeIn {
   position: relative;
   margin: auto;
-  animation:moveLeftAndFadeIn 3s ease-in-out;
+  animation:moveLeftAndFadeIn 2s ease-in-out;
 
   /* Safari and Chrome */
-  -webkit-animation:moveLeftAndFadeIn 3s;
+  -webkit-animation:moveLeftAndFadeIn 2s;
 }
 
 .scaleUpAndFadeIn {
   position: relative;
   margin: auto;
-  animation:scaleUpAndFadeIn 3s ease-in-out;
+  animation:scaleUpAndFadeIn 2s ease-in-out;
 
   /* Safari and Chrome */
-  -webkit-animation:scaleUpAndFadeIn 3s;
+  -webkit-animation:scaleUpAndFadeIn 2s;
 }
 
 .fadeIn {
@@ -153,7 +153,12 @@ section > h5, section > p {
 }
 
 .section {
+  min-width: 450px;
   overflow: hidden;
+}
+
+.material-tooltip > .backdrop {
+  background-color: $contigo-teal;
 }
 
 @keyframes fadeIn

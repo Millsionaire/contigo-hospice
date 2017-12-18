@@ -11,7 +11,7 @@ function about(AnimateService) {
       classToRemove: 'hidden'
     },
     {
-      id: '#about-content',
+      id: '.about-content',
       classToAdd: 'moveRightAndFadeIn',
       classToRemove: 'hidden'
     }

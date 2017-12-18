@@ -2,7 +2,6 @@ const angular = require('angular');
 
 const main = require('./app/main');
 const header = require('./app/header');
-const carousel = require('./app/carousel');
 const footer = require('./app/footer');
 const about = require('./app/about');
 const howItWorks = require('./app/howitworks');
@@ -19,7 +18,6 @@ angular
   .service('AnimateService', AnimateService)
   .component('app', main)
   .component('contigoHeader', header)
-  .component('carousel', carousel)
   .component('about', about)
   .component('howItWorks', howItWorks)
   .component('contact', contact)

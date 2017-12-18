@@ -7,4 +7,5 @@ function main() {
   angular.element('.button-collapse').sideNav();
   angular.element('.parallax').parallax();
   angular.element('.scrollspy').scrollSpy({scrollOffset: 100});
+  angular.element('.modal').modal();
 }

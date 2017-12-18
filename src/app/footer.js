@@ -9,12 +9,12 @@ function footer(AnimateService) {
   const animateFooterObj = [
     {
       id: '#footer',
-      classToAdd: 'moveUpAndFadeIn',
+      classToAdd: 'fadeIn',
       classToRemove: 'hidden'
     },
     {
       id: '.footer-brand',
-      classToAdd: 'moveUpAndFadeIn',
+      classToAdd: 'fadeIn',
       classToRemove: 'hidden'
     }
   ];

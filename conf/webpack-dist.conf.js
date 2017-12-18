@@ -42,7 +42,25 @@ module.exports = {
         loaders: [
           'html-loader'
         ]
-      }
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[path][name].[hash].[ext]",
+            path: __dirname + 'images/carousel/'
+          }
+        },
+      },
     ]
   },
   plugins: [
@@ -52,10 +70,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html')
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {comments: false},
-      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   output: {comments: false},
+    //   compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
+    // }),
     new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
     new webpack.LoaderOptionsPlugin({
@@ -69,7 +87,13 @@ module.exports = {
     filename: '[name]-[hash].js'
   },
   entry: {
-    app: `./${conf.path.src('index')}`,
+    app: [`./${conf.path.src('index')}`, './node_modules/materialize-css/dist/js/materialize.min.js'],
     vendor: Object.keys(pkg.dependencies)
+  },
+  resolve: {
+    alias: {
+      materializecss: 'materialize-css/dist/css/materialize.css',
+      Materialize: 'materialize-css/dist/js/materialize.js'
+    }
   }
 };

@@ -17,15 +17,54 @@
           </div>
           <div id="contact-mail" class="col s4 hidden">
             <div class="contact">
-              <a href="mailto:hayleyjh@gmail.com" class="contigo-teal">
+              <a href="#mail-modal" class="contigo-teal waves-effect waves-light modal-trigger">
                 <i class="material-icons">mail</i>
                 <p class="contact">Email Us</p>
               </a>
+              <div id="mail-modal" class="modal">
+                <div class="modal-content">
+                  <h4>Send us a message</h4>
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name">Last Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                              <label for="textarea1">Textarea</label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Send</a>
+                </div>
+              </div>
             </div>
           </div>
           <div id="contact-location" class="col s4 hidden">
             <div class="contact">
-              <a href="https://maps.google.com/maps?ll=26.225982,-98.25664&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=McAllen%20Texas" class="contigo-teal">
+              <a href="https://maps.google.com/maps?ll=26.225982,-98.25664&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=McAllen%20Texas"
+                 class="contigo-teal" target="_blank">
               <i class="material-icons">location_on</i>
               <p class="contact">Visit Us</p>
               </a>
@@ -43,3 +82,4 @@
     </div>
   </div>
 </div>
+
