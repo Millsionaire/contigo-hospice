@@ -5,6 +5,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FailPlugin = require('webpack-fail-plugin');
 const autoprefixer = require('autoprefixer');
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 module.exports = {
   module: {
@@ -80,6 +81,11 @@ module.exports = {
         postcss: () => [autoprefixer]
       },
       debug: true
+    }),
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: "Cinzel", variants: [ "400", "700" ] }
+      ]
     })
   ],
   devtool: 'source-map',
@@ -90,7 +96,6 @@ module.exports = {
   },
   resolve: {
     alias: {
-      materializecss: 'materialize-css/dist/css/materialize.css',
       Materialize: 'materialize-css/dist/js/materialize.js'
     }
   }

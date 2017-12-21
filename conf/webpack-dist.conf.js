@@ -7,6 +7,7 @@ const FailPlugin = require('webpack-fail-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('../package.json');
 const autoprefixer = require('autoprefixer');
+const GoogleFontsPlugin = require("google-fonts-webpack-plugin");
 
 module.exports = {
   module: {
@@ -27,7 +28,7 @@ module.exports = {
         test: /\.(css|scss)$/,
         loaders: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?minimize!sass-loader!postcss-loader'
+          use: 'css-loader?minimize!postcss-loader!sass-loader'
         })
       },
       {
@@ -64,6 +65,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     FailPlugin,
@@ -74,12 +80,18 @@ module.exports = {
     //   output: {comments: false},
     //   compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
     // }),
-    new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: () => [autoprefixer]
       }
+    }),
+    new ExtractTextPlugin('index-[contenthash].css'),
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: "Cinzel", variants: [ "400", "700" ] }
+      ]
+      /* ...options */
     })
   ],
   output: {
@@ -87,13 +99,7 @@ module.exports = {
     filename: '[name]-[hash].js'
   },
   entry: {
-    app: [`./${conf.path.src('index')}`, './node_modules/materialize-css/dist/js/materialize.min.js'],
+    app: `./${conf.path.src('index')}`,
     vendor: Object.keys(pkg.dependencies)
-  },
-  resolve: {
-    alias: {
-      materializecss: 'materialize-css/dist/css/materialize.css',
-      Materialize: 'materialize-css/dist/js/materialize.js'
-    }
   }
 };

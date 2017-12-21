@@ -1,5 +1,3 @@
-const angular = require('angular');
-
 const main = require('./app/main');
 const header = require('./app/header');
 const footer = require('./app/footer');
@@ -8,9 +6,9 @@ const howItWorks = require('./app/howitworks');
 const contact = require('./app/contact');
 const AnimateService = require('./app/services/animateService');
 
-require('../node_modules/jquery/dist/jquery.min');
+require('jquery');
+const angular = require('angular');
 const angularMaterialize = require('angular-materialize');
-require('materialize-loader');
 require('./index.scss');
 
 angular
